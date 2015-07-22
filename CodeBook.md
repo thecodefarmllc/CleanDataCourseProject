@@ -51,8 +51,8 @@ fBodyAccJerk_std___Z                 fBodyGyro_std___X                    fBodyG
 fBodyAccMag_std__                    fBodyBodyAccJerkMag_std__            fBodyBodyGyroMag_std__               fBodyBodyGyroJerkMag_std__`          
 
 ## Processing and Transformations:
-* Test and training data were merged to produce was data.frame
-* Activity id was replaced with matching the activity label.
+* Test and training data were merged to produce one data.frame
+* Activity id was replaced with matching activity label.
 * Feature names were renamed to remove non-alphanumeric characters, such as -, (, ).
 * Duplicate columns were removed
 * The features variables used were those that had mean and std in the name. All other feature variables were dropped from the tidy data set.
