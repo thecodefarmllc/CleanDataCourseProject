@@ -20,8 +20,11 @@ The script generates a tidy dataset that is saved to the file "./CleanDataProjec
 ## Variables Used
 
 In the list below, _xxx_ is a place holder for either "_test_" or "_train_".
-*`subject_xxx.txt` - all variables used
-*`X_xxx.txt` - Used the following variables:
+* `features.txt` - Second variable used
+* `activity_labels.txt' all variables used
+* `subject_xxx.txt` - all variables used
+* `Y_xxx.txt` - all variables used
+* `X_xxx.txt` - Used the following variables (please note that these are the renamed column names):
 `
 tBodyAcc_mean___X					 tBodyAcc_mean___Y                   
 tBodyAcc_mean___Z
@@ -47,3 +50,11 @@ fBodyAcc_std___Y                     fBodyAcc_std___Z                     fBodyA
 fBodyAccJerk_std___Z                 fBodyGyro_std___X                    fBodyGyro_std___Y                    fBodyGyro_std___Z                   
 fBodyAccMag_std__                    fBodyBodyAccJerkMag_std__            fBodyBodyGyroMag_std__               fBodyBodyGyroJerkMag_std__`          
 
+## Processing and Transformations:
+* Test and training data were merged to produce was data.frame
+* Activity id was replaced with matching the activity label.
+* Feature names were renamed to remove non-alphanumeric characters, such as -, (, ).
+* Duplicate columns were removed
+* The features variables used were those that had mean and std in the name. All other feature variables were dropped from the tidy data set.
+* The mean was calculated on each feature variable by Subject and Activity
+* The tidy data was sorted by Subject and Activity
